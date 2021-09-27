@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, Redirect, useHistory } from 'react-router-dom'
 
 function Review({reviews}) {
 
@@ -20,8 +20,10 @@ function Review({reviews}) {
 
       </div>
     )
+  } else if (reviews.length) {
+    return (<Redirect to="/" />)
   } else {
-    return (<h2>Loading Review...</h2>)
+    return <h2>Loading Reviews...</h2>
   }
 
 }
