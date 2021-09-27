@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, Redirect, useHistory } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
 function Review({reviews}) {
 
@@ -21,8 +21,7 @@ function Review({reviews}) {
       </div>
     )
   } else {
-    alert("Mysterious alert! Something is going wrong but we won't tell you! LOL")
-    return (<Redirect to="/" />)
+    return (<h2>Loading Review...</h2>)
   }
 
 }
